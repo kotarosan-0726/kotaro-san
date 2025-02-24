@@ -2,12 +2,13 @@
 <html>
 <head>
     <title>Kotaro San</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added for mobile scaling -->
     <style>
         canvas { border: 1px solid black; }
         body { display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #222; }
         #start-screen { position: absolute; display: flex; justify-content: center; align-items: center; width: 400px; height: 600px; }
-        #start-button { cursor: pointer; width: 100px; height: 50px; } /* Smaller size */
-        #restart-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); cursor: pointer; display: none; width: 100px; height: 50px; } /* Smaller size */
+        #start-button { cursor: pointer; width: 100px; height: 50px; }
+        #restart-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); cursor: pointer; display: none; width: 100px; height: 50px; }
     </style>
 </head>
 <body>
