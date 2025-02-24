@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kotaro San</title>
+    <style>
+        canvas { border: 1px solid black; }
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #222; }
+        #start-screen { position: absolute; display: flex; justify-content: center; align-items: center; width: 400px; height: 600px; }
+        #start-button { cursor: pointer; width: 100px; height: 50px; } /* Smaller size */
+        #restart-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); cursor: pointer; display: none; width: 100px; height: 50px; } /* Smaller size */
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
+    <div id="start-screen">
+        <img id="start-button" src="start.png">
+    </div>
+    <img id="restart-button" src="replay.png">
+    <script src="game.js"></script>
+</body>
+</html>
