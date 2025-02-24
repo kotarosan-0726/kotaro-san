@@ -29,6 +29,9 @@ const gravity = 0.3;
 let velocityY = 0;
 let isGrounded = false;
 
+// Touch variables
+let touchX = null;
+
 function spawnPlatform() {
     const type = level < 5 ? 'powerup' : Math.random() < 0.3 + (level * 0.005) ? 'enemy' : 'powerup';
     const x = Math.random() * (canvas.width - 100);
@@ -54,9 +57,15 @@ function update() {
     // Background music
     bgMusic.play();
 
-    // Hero movement
+    // Hero movement (Keyboard)
     if (keys['ArrowLeft'] && hero.x > 0) hero.x -= hero.speed;
     if (keys['ArrowRight'] && hero.x < canvas.width - hero.width) hero.x += hero.speed;
+
+    // Hero movement (Touch)
+    if (touchX !== null) {
+        if (touchX < canvas.width / 2 && hero.x > 0) hero.x -= hero.speed; // Left half moves left
+        if (touchX > canvas.width / 2 && hero.x < canvas.width - hero.width) hero.x += hero.speed; // Right half moves right
+    }
 
     // Gravity and falling
     velocityY += gravity;
@@ -174,21 +183,35 @@ function resetGame() {
     bgMusic.play();
 }
 
-// Input handling
+// Input handling (Keyboard)
 let keys = {};
 window.addEventListener('keydown', e => keys[e.key] = true);
 window.addEventListener('keyup', e => keys[e.key] = false);
 
-// Start and restart button handling with sound
+// Touch controls
+canvas.addEventListener('touchstart', e => {
+    e.preventDefault();
+    touchX = e.touches[0].clientX - canvas.offsetLeft; // Get touch position relative to canvas
+});
+canvas.addEventListener('touchmove', e => {
+    e.preventDefault();
+    touchX = e.touches[0].clientX - canvas.offsetLeft; // Update touch position
+});
+canvas.addEventListener('touchend', e => {
+    e.preventDefault();
+    touchX = null; // Stop movement when touch ends
+});
+
+// Start and restart button handling
 startButton.addEventListener('click', () => {
     gameStarted = true;
     startScreen.style.display = 'none';
-    hurtSound.play(); // Play catsound once
+    hurtSound.play();
     resetGame();
 });
 
 restartButton.addEventListener('click', () => {
-    hurtSound.play(); // Play catsound once
+    hurtSound.play();
     resetGame();
 });
 
