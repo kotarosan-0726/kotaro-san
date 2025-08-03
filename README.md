@@ -13,9 +13,9 @@ A collaborative browser-based game built with HTML, CSS, and JavaScript, featuri
   - Restart functionality with `replay.png` button.
   - Dark-themed UI for immersive gameplay.
 - **Team Contributions**:
-  - [YourUsername]: HTML structure, CSS styling, and responsive design.
-  - [Collaborator1]: JavaScript game logic and canvas rendering.
-  - [Collaborator2]: Asset creation (start.png, replay.png) and testing.
+  - [kotarosan-0726]: HTML structure, CSS styling, and responsive design.
+  - [kotarosan-0726]: JavaScript game logic and canvas rendering.
+  - [kotarosan-0726]: Asset creation (start.png, replay.png) and testing.
 
 ## Installation
 1. **Clone the Repository**:
