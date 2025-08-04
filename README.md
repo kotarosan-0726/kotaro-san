@@ -15,7 +15,7 @@ A collaborative browser-based game built with HTML, CSS, and JavaScript, featuri
 - **Team Contributions**:
   - [kotarosan-0726]: HTML structure, CSS styling, and responsive design.
   - [kotarosan-0726]: JavaScript game logic and canvas rendering.
-  - [kotarosan-0726]: Asset creation (start.png, replay.png) and testing.
+  - [waimanyick1997]: Asset creation (start.png, replay.png) and testing.
 
 ## Installation
 1. **Clone the Repository**:
