@@ -22,3 +22,5 @@ A collaborative browser-based game built with HTML, CSS, and JavaScript, featuri
    ```bash
    git clone https://github.com/YourUsername/Kotaro-San.git
    cd Kotaro-San
+## Play the Game
+Try it online: [Kotaro’s Platformer](https://kotarosan-0726.github.io/kotaro-san)
